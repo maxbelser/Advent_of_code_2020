@@ -40,7 +40,7 @@ public class Solution {
     		int a = input.get(i);
     		for(k = i + 1; k < size; k++) {
     			int b = input.get(k);
-    			if(a+b == 2020) {
+    			if(a+b == SUM) {
     				result = a * b;
     				break;
     			}
@@ -63,7 +63,7 @@ public class Solution {
     			int b = input.get(k);
     			for(j = k + 1; j < size; j++) {
     				int c = input.get(j);
-    				if(a+b+c == 2020) {
+    				if(a+b+c == SUM) {
     					result = a * b *c;
     					break;
     				}
