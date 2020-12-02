@@ -15,32 +15,16 @@ public class PasswordValidaton {
 	
 	private int occurences = 0;
 
-	public int getMinNumber() {
-		return minNumber;
-	}
-
 	public void setMinNumber(int minNumber) {
 		this.minNumber = minNumber;
-	}
-
-	public int getMaxNumber() {
-		return maxNumber;
 	}
 
 	public void setMaxNumber(int maxNumber) {
 		this.maxNumber = maxNumber;
 	}
 
-	public char getLetter() {
-		return letter;
-	}
-
 	public void setLetter(char letter) {
 		this.letter = letter;
-	}
-
-	public String getPassword() {
-		return password;
 	}
 
 	public void setPassword(String password) {
@@ -61,10 +45,6 @@ public class PasswordValidaton {
 
 	public void setSecondValid(boolean isSecondValid) {
 		this.isSecondValid = isSecondValid;
-	}
-
-	public int getOccurences() {
-		return occurences;
 	}
 
 	public void setOccurences(int occurences) {
