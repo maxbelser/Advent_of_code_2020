@@ -19,6 +19,7 @@ public class Solution {
 		map.setRightsteps(FIRST_PROBLEM_STEPS_RIGHT);
 
 		System.out.println(firstProblem());
+		System.out.println(secondProblem());
     }
 	
 	public static ForestMap readInput() throws IOException {
@@ -57,10 +58,24 @@ public class Solution {
     }
 	
 	private static int firstProblem() {
+		return collisionTracker(FIRST_PROBLEM_STEPS_RIGHT, FIRST_PROBLEM_STEPS_DOWN);
+	}
+	
+	private static int secondProblem() {
+		int result = 1;
+		result *= collisionTracker(1,1);
+		result *= collisionTracker(3,1);
+		result *= collisionTracker(5,1);
+		result *= collisionTracker(7,1);
+		result *= collisionTracker(1,2);
+		return result;
+	}
+	
+	private static int collisionTracker(int stepsRight, int stepsdown) {
 		int result = 0;
 		int currentColumn = 0;
-		for(int i = FIRST_PROBLEM_STEPS_DOWN; i < map.getRowcount(); i = i + FIRST_PROBLEM_STEPS_DOWN) {
-			currentColumn += FIRST_PROBLEM_STEPS_RIGHT;
+		for(int i = stepsdown; i < map.getRowcount(); i = i + stepsdown) {
+			currentColumn += stepsRight;
 			if(currentColumn >= map.getColumncount()) {
 				currentColumn = TreecountUtil.mutateColumn(currentColumn, map.getColumncount());
 			}
